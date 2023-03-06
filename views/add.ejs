@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Toy Store Project</title>
+    <style>
+        nav {
+            background-color: #FF6F61;
+        }
+
+        .navbar-brand {
+            font-size: 32px;
+            margin-left: 16px;
+            font-weight: 700;
+        }
+
+        .nav-link {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0 24px;
+        }
+
+        .content {
+            margin-top: 36px;
+            padding-left: 32px;
+        }
+
+        .card {
+            margin: 16px;
+        }
+
+        .card-title {
+            margin-top: 24px;
+            height: 56px;
+        }
+
+        .products-list {
+            margin-top: 24px;
+        }
+
+        .price {
+            font-size: 24px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 170px;
+        }
+
+        footer {
+            height: 75px;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .footer-txt {
+            padding: 37.5px 0;
+            background-color: #FF6F61;
+            text-align: center;
+        }
+
+        .add-product {
+            margin: 24px 0;
+            padding: 0 250px;
+            display: flex;
+        }
+        form {
+            width: 100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="/">ToyStore</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Product</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>Add a Product</h1>
+        <div class="add-product">
+            <form action="/save" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter a name here...">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" min="0" class="form-control" id="price" name="price" placeholder="Enter a price here...">
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Description</label>
+                    <textarea class="form-control" id="desc" name="desc" placeholder="Write description of your new product here..." rows="10"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="thumb" class="form-label">Thumbnail</label>
+                    <input type="text" min="0" class="form-control" id="thumb" name="thumb" placeholder="Copy image address...">
+                    <div id="name" class="form-text">Please copy image address from Google.</div>
+                </div>
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p class="footer-txt">No Copyright! Created by Kanyummi with love</p>
+    </footer>
+</body>
+
+</html>
